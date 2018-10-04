@@ -25,4 +25,11 @@ public class HelloWorldController {
         return mav;
     }
 
+    @RequestMapping(value="helloFromAus", method = RequestMethod.GET)
+    public ModelAndView helloFromAus() {
+        ModelAndView mav = new ModelAndView("index");
+        mav.addObject("siteName", this.siteName);
+        return mav;
+    }
+
 }
